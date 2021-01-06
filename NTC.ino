@@ -43,7 +43,6 @@ void soilMoisture_sensor() {
     soilMoistureTime += soilMoistureDelay;
   }
 }
-
 // ------------------------------------------------------
 
 
@@ -66,7 +65,6 @@ void printData() {
     printDataTime += printDataDelay;
   }
 }
-
 // -------------------------------------------------
 
 void setup() {
@@ -74,6 +72,15 @@ void setup() {
   pinMode(D6, INPUT);
   dht.begin();
   Blynk.begin("3qA0yxukgG5BgUuw8uI0rFD5qggG1Ehn", "OPPO Reno4", "0981966915");
+  pinMode(D1, OUTPUT);
+  pinMode(D2, OUTPUT);
+  pinMode(D3, OUTPUT);
+  pinMode(D4, OUTPUT);
+
+  digitalWrite(D1, HIGH);
+  digitalWrite(D2, HIGH);
+  digitalWrite(D3, HIGH);
+  digitalWrite(D4, HIGH);
 }
 
 void loop() {
